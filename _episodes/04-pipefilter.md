@@ -39,7 +39,7 @@ $ ls populations
 {: .language-bash}
 
 ~~~
-bowerbird.txt  dunnock.txt  final.txt  lengths.txt  python.txt  shark.txt  six-species.csv  toad.txt  wildcat.txt
+bowerbird.txt  dunnock.txt  python.txt  shark.txt  six-species.csv  toad.txt  wildcat.txt
 ~~~
 {: .output}
 
@@ -258,7 +258,7 @@ $ sort -g lengths.txt
 ~~~
 {: .output}
 
-Remember that there is one population time series per line. So this output tells us that the python file contains one population time series each, the bowerbird file contains four, and so on.
+Remember that there is one population time series per line. So this output tells us that the python file contains one population time series, the bowerbird file contains four, and so on.
 
 We can put the sorted list of lines in another temporary file called `sorted-lengths.txt`
 by putting `> sorted-lengths.txt` after the command,
@@ -382,7 +382,7 @@ those intermediate files make it hard to follow what's going on.
 We can make it easier to understand by running `sort` and `head` together:
 
 ~~~
-$ sort -n lengths.txt | head -n 1
+$ sort -g lengths.txt | head -n 1
 ~~~
 {: .language-bash}
 
@@ -451,7 +451,7 @@ Redirection and pipes, as used in the last few commands, are illustrated below:
 
 ![Redirects and Pipes of different commands: "wc -l *.txt" will direct the
 output to the shell. "wc -l *.txt > lengths" will direct output to the file
-"lengths". "wc -l *.txt | sort -n | head -n 1" will build a pipeline where the
+"lengths". "wc -l *.txt | sort -g | head -n 1" will build a pipeline where the
 output of the "wc" command is the input to the "sort" command, the output of
 the "sort" command is the input to the "head" command and the output of the
 "head" command is directed to the shell](../fig/redirects-and-pipes.svg)
