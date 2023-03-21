@@ -376,7 +376,7 @@ $ ls -F Desktop/shell-lesson-data
 {: .language-bash}
 
 ~~~
-exercise-data/  population/
+exercise-data/  populations/
 ~~~
 {: .output}
 
@@ -489,7 +489,7 @@ $ ls -F -a
 {: .language-bash}
 
 ~~~
-./  ../  exercise-data/  population/
+./  ../  exercise-data/  populations/
 ~~~
 {: .output}
 
@@ -797,7 +797,7 @@ Network/              Volumes/
 Knowing this much about files and directories,
 Phillipa is ready to organize the files the files for her research.
 
-She creates a directory called `population`
+She creates a directory called `populations`
 (to remind herself where the data came from),
 which will contain the data files from the downloaded dataset,
 and her data processing scripts.
@@ -818,7 +818,7 @@ Now in her current directory `shell-lesson-data`,
 Phillipa can see what files she has using the command:
 
 ~~~
-$ ls population
+$ ls populations
 ~~~
 {: .language-bash}
 
@@ -835,7 +835,7 @@ and then presses <kbd>Tab</kbd> (the tab key on her keyboard),
 the shell automatically completes the directory name for her:
 
 ~~~
-$ ls population/
+$ ls populations/
 ~~~
 {: .language-bash}
 
@@ -847,13 +847,13 @@ If Phillipa adds <kbd>s</kbd> and presses <kbd>Tab</kbd> again,
 the shell will list all the matches:
 
 ~~~
-$ ls population/s
+$ ls populations/s
 ~~~
 {: .language-bash}
 
 To see all of those files, she can press <kbd>Tab</kbd> once more.
 ~~~
-ls population/s
+ls populations/s
 shark.txt   six-species.csv
 ~~~
 {: .language-bash}

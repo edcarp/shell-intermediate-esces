@@ -11,7 +11,6 @@ You need to download some files to follow this lesson.
 2. Unzip/extract the file.
    **Let your instructor know if you need help with this step**.
    You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
-3. You will also need to download another data directory when you're at the course (for Licensing reasons, we can't share it publicly here)
 
 ## Install software
 If you do not already have the shell software installed, you will need to
