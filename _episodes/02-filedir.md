@@ -376,7 +376,7 @@ $ ls -F Desktop/shell-lesson-data
 {: .language-bash}
 
 ~~~
-exercise-data/  populations/
+exercise-data/  north-pacific-gyre/
 ~~~
 {: .output}
 
@@ -489,7 +489,7 @@ $ ls -F -a
 {: .language-bash}
 
 ~~~
-./  ../  exercise-data/  populations/
+./  ../  exercise-data/  north-pacific-gyre/
 ~~~
 {: .output}
 
