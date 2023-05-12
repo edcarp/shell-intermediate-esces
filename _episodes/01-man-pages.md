@@ -1,5 +1,5 @@
 ---
-title: "Manual Pages" 
+title: "Manual Pages"
 teaching: 10
 exercises: 0
 questions:
