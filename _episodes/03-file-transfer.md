@@ -3,12 +3,12 @@ title: "Transferring Files"
 teaching: 10
 exercises: 0
 questions:
-- "How to use wget to transfer file?"
+- "How to use wget to transfer a file?"
 objectives:
 - "Learn what wget is"
 - "Use wget to transfer a remote file to your local computer"
 keypoints:
-- "There are multiple ways to copy remote files."
+- "There are multiple ways to copy remote files at the command-line."
 - "These may be used to simply transfer one file, or to mirror a whole Web site."
 - "Compared to using a Web browser to access and save files, these allow greater opportunities for automation."
 ---
@@ -99,10 +99,8 @@ where:
 `-k` converts links to make them suitable for local viewing 
 `-q` supresses the output to the screen
 
-The above command can also save the clone the contents of one domain to another
-if we are using ssh or sshfs to access a webserver. 
- 
-Please refer to the man page by typing `man wget` in the shell for more information.
+The above command can also save a clone of the contents of one domain to another,
+if we are using `ssh` or `sshfs` to access a webserver. 
   
 ## Other commands
 
