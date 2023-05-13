@@ -5,9 +5,12 @@ exercises: 0
 questions:
 - "How to use wget to transfer file?"
 objectives:
-- "FIXME"
+- "Learn what wget is"
+- "Use wget to transfer a remote file to your local computer"
 keypoints:
-- "FIXME"
+- "There are multiple ways to copy remote files."
+- "These may be used to simply transfer one file, or to mirror a whole Web site."
+- "Compared to using a Web browser to access and save files, these allow greater opportunities for automation."
 ---
 
 There are other ways to interact with remote files other than git.
