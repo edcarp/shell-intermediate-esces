@@ -1,20 +1,16 @@
 ---
 title: "Working Remotely"
-teaching: 10
+teaching: 15
 exercises: 0
 questions:
 - "How do I use '`ssh`' and '`scp`' ?"
 objectives:
 - "Learn what SSH is"
-- "Learn what an SSH key is"
-- "Generate your own SSH key pair"
-- "Learn how to use your SSH key"
 - "Learn how to work remotely using `ssh` and `scp`"
-- "Add your SSH key to an remote server"
 keypoints:
-- "SSH is a secure alternative to username/password authorization"
-- "SSH keys are generated in public/private pairs. Your public key can be shared with others. The private keys stays on your machine only."
+- "SSH is a secure means to access a remote Linux computer"
 - "The 'ssh' and 'scp' utilities are secure alternatives to logging into, and copying files to/from remote machine"
+- "'ssh' and 'scp' are essential for using remote Linux servers and
 ---
 Let's take a closer look at what happens when we use the shell
 on a desktop or laptop computer.
@@ -23,23 +19,16 @@ so that the operating system knows who we are and what we're allowed to do.
 We do this by typing our username and password;
 the operating system checks those values against its records,
 and if they match,
-runs a shell for us.
-
-As we type commands,
-the 1's and 0's that represent the characters we're typing are sent from the keyboard to the shell.
-The shell displays those characters on the screen to represent what we type,
-and then,
-if what we typed was a command,
-the shell executes it and displays its output (if any).
+we can now launch software such as the shell.
 
 What if we want to run some commands on another machine,
 such as the server in the basement that manages our database of experimental results?
 To do this,
 we have to first log in to that machine.
-We call this a [remote login]({{ page.root }}/reference/{{ site.index }}#remote-login).
+We call this a remote login.
 
 In order for us to be able to login, the remote computer must be running 
-a [remote login server]({{ page.root }}/reference/{{ site.index }}#remote-login-server) and we will
+a remote login server and we will
 run a client program that can talk to that server.
 The client program passes our login credentials to the remote login server
 and, if we are allowed to login, that server then runs a shell for us on the 
@@ -52,34 +41,20 @@ That remote shell runs those commands on our behalf,
 just as a local shell would,
 then sends back output, via the server, to our client, for our computer to display.
 
-## SSH History
-
-Back in the day,
-when everyone trusted each other and knew every chip in their computer by its first name,
-people didn't encrypt anything except the most sensitive information when sending it over a network
-and the two programs used for running a shell (usually back then, the Bourne Shell, `sh`) on, or copying
-files to, a remote machine were named `rsh` and `rcp`, respectively. Think (`r`)emote `sh` and `cp`
-
-However, anyone could watch the unencrypted network traffic, which meant that villains could
-steal usernames and passwords,
-and use them for all manner of nefarious purposes.
-
-The [SSH protocol]({{ page.root }}/reference/{{ site.index }}#ssh-protocol)
-was invented to prevent this (or at least slow it down).
-It uses several sophisticated, and heavily tested, encryption protocols
+The SSH protocol
+uses several sophisticated, and heavily tested, encryption protocols
 to ensure that outsiders can't see what's in the messages
 going back and forth between different computers.
 
 The remote login server which accepts connections from client programs
-is known as the [SSH daemon]({{ page.root }}/reference/{{ site.index }}#ssh-daemon), or `sshd`.
+is known as the SSH daemon, `sshd`.
 
 The client program we use to login remotely is
-the [secure shell]({{ page.root }}/reference/{{ site.index }}#secure-shell),
-or `ssh`, think (`s`)ecure `sh`. 
+the secure shell
+or `ssh`.
 
 The `ssh` login client has a companion program called `scp`, think  (`s`)ecure `cp`, 
 which allows us to copy files to or from a remote computer using the same kind of encrypted connection.
-
 
 ## A remote login using `ssh`
 
@@ -105,50 +80,26 @@ $ pwd
 {: .bash}
 
 ~~~
-/users/vlad
+/c/Users/dbarker/Desktop
 ~~~
 {: .output}
 
 ~~~
-$ ssh vlad@moon.euphoric.edu
+$ ssh nelle@moon.euphoric.edu
 Password: ********
 ~~~
 {: .bash}
 
-~~~
-    moon> hostname
-~~~
-{: .bash}
-
-~~~
-    moon
-~~~
-{: .output}
-
-~~~
-    moon> pwd
-~~~
-{: .bash}
-
-~~~
-    /home/vlad
-~~~
-{: .output}
-
-~~~
-    moon> ls -F
-~~~
-{: .bash}
-
-~~~
-    bin/     cheese.txt   dark_side/   rocks.cfg
-~~~
-{: .output}
+Assuming this connection works (this specific example will not!), any commands we issue,
+for example `hostname`, `pwd`, `ls` or some scientific analysis software, will run on the
+remote server. This will continue until we exit the remote shell, for example:
 
 ~~~
     moon> exit
 ~~~
 {: .bash}
+
+`pwd` confirms we are now running commands on the local computer again (not the remote server):
 
 ~~~
 $ pwd
@@ -156,7 +107,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/users/vlad
+/c/Users/dbarker/Desktop
 ~~~
 {: .output}
 
