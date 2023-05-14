@@ -106,7 +106,7 @@ either of which may include computer names.
 If we leave out a computer name,
 `scp` assumes we mean the machine we're running on.
 For example,
-this command copies our latest results to the backup server in the basement,
+this command copies our latest results to Nelle's `backups` directory of server `backupserver.euphoric.edu`,
 printing out its progress as it does so:
 
 ~~~
