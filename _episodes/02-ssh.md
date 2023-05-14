@@ -110,7 +110,7 @@ this command copies our latest results to the backup server in the basement,
 printing out its progress as it does so:
 
 ~~~
-$ scp results.dat nelle@backupserver:backups/results-2023-16-05.dat
+$ scp results.dat nelle@backupserver.euphoric.edu:backups/results-2023-16-05.dat
 Password: ********
 ~~~
 {: .bash}
@@ -126,10 +126,10 @@ the file we are copying to.
 Copying a whole directory betwen remote machines uses the same syntax as the `cp` command:
 we just use the `-r` option to signal that we want copying to be recursively.
 For example,
-this command copies all of our results from the `backup` directory on the `backupserver` server to our laptop:
+this command copies all of our results from the `backup` directory on the `backupserver.euphoric.edu` server to our laptop:
 
 ~~~
-$ scp -r nelle@backupserver:backups ./backups
+$ scp -r nelle@backupserver.euphoric.edu:backups ./backups
 Password: ********
 ~~~
 {: .bash}
