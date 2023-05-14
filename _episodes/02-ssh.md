@@ -9,9 +9,11 @@ objectives:
 - "Learn how to work remotely using `ssh` and `scp`"
 keypoints:
 - "SSH is a secure means to access a remote Linux computer"
-- "The 'ssh' and 'scp' utilities are secure alternatives to logging into, and copying files to/from remote machine"
-- "'ssh' and 'scp' are essential for using remote Linux servers and
+- "The 'ssh' and 'scp' utilities are secure alternatives to logging into,
+  and copying files to/from remote machine"
+- "'ssh' and 'scp' are essential for using remote Linux servers"
 ---
+
 What if we want to run some commands on another machine,
 such as the server in the basement that manages our database of experimental results?
 To do this,
