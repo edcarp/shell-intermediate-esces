@@ -16,6 +16,8 @@ keypoints:
 - "Use `chmod` to change permissions on a file or directory."
 ---
 
+XXX simplify and give better coverage to Windows XXX
+
 Unix controls who can read, modify, and run files using *permissions*.
 We'll discuss how Windows handles permissions at the end of the section:
 the concepts are similar,
