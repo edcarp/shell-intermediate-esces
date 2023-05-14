@@ -1,6 +1,6 @@
 ---
 title: "Manual Pages"
-teaching: 10
+teaching: 15
 exercises: 0
 questions:
 - "How to use man pages?"
@@ -29,7 +29,7 @@ The output displayed is referred to as the "man page".
 
 Note, if you are using Git Bash for Windows, man pages are not available. However, you can find them
 on the Web if you search for a term such as "man cp". You can also some help from many commands
-with the `--help` option:
+with the `--help` option, whether using Git Bash and other systems:
 
 ~~~
 $ cp --help
