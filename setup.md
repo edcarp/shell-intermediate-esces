@@ -7,7 +7,8 @@ root: .
 ## Download files
 You need to download some files to follow this lesson.
 
-1. Download [shell-lesson-data.zip][zip-file] and move the file to your Desktop.
+1. We will use the same files as in our [novice/introductory course][https://edcarp.github.io/shell-novice-esces]. If you attended that course, you may have the data already.
+Otherwise, download [shell-lesson-data.zip][zip-file] and move the file to your Desktop.
 2. Unzip/extract the file.
    **Let your instructor know if you need help with this step**.
    You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
