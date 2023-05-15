@@ -1,5 +1,5 @@
 ---
-title: "Reintroducing the Shell"
+title: "(Re)Inntroducing the Shell"
 teaching: 5
 exercises: 0
 questions:
