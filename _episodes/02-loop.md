@@ -585,12 +585,15 @@ then "cp dunnock.txt original-dunnock.txt",
 "cp toad.txt original-toad.txt",
 and finally "cp wildcat.txt original-wildcat.txt"](../fig/shell_script_for_loop_flow_chart.svg)
 
-> ## Beginning and End
+> ## Keyboard shortcuts for moving around the command line
 >
 > We can move to the beginning of a line in the shell by typing <kbd>Ctrl</kbd>+<kbd>A</kbd>
-> and to the end using <kbd>Ctrl</kbd>+<kbd>E</kbd>.
+> and to the end using <kbd>Ctrl</kbd>+<kbd>E</kbd>. This may be easier and faster than
+> using the left and right cursor keys.
+>
+> An extensive range of shortcuts is provided by the shell. To discover more, try a Web search for
+> "bash keyboard shortcuts".
 {: .callout}
-
 
 > ## Those Who Know History Can Choose to Repeat It
 >
@@ -603,6 +606,9 @@ and finally "cp wildcat.txt original-wildcat.txt"](../fig/shell_script_for_loop_
 > $ history | tail -n 5
 > ~~~
 > {: .language-bash}
+
+and happens to see this in the output:
+
 > ~~~
 >   456  ls -l NENE0*.txt
 >   457  rm stats-NENE01729B.txt.txt
