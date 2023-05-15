@@ -1,6 +1,6 @@
 ---
 title: "Transferring Files"
-teaching: 10
+teaching: 5
 exercises: 0
 questions:
 - "How to use wget to transfer a file?"
@@ -13,16 +13,14 @@ keypoints:
 - "Compared to using a Web browser to access and save files, these allow greater opportunities for automation."
 ---
 
-There are other ways to interact with remote files other than git.
+Many of us use remote repositories with `git` (e.g.  GitHub). This allows us to download code or
+other files written by colleagues.
 
-It is true that we can clone an entire git repository, or even one level of a git repository using:
-`git clone --depth-1 repository_name`.
-What about files that do not exist in a git repository? If we wish to download files from the shell
-we can use tools such as Wget.
+What about files that do not exist in a git repository? If we wish to download online files from the shell, we can use tools such as Wget.
 
 ## Wget
 
-Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.
+Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions. (However, it is not part of Git Bash for Windows.)
 
 To download this lesson (located at https://edcarp.github.io/shell-extras/03-file-transfer/index.html) from the web via HTTP we can simply type:
 
@@ -45,62 +43,6 @@ index.html        100%[===================>]  21.94K  --.-KB/s    in 0.003s
 2021-05-29 02:12:19 (6.35 MB/s) - ‘index.html’ saved [22467/22467]
 ~~~
 {: .output}
-
-Alternatively, you can add more options, which are in the form:
-
-~~~
-wget -r -np -D domain_name target_URL
-~~~
-{: .bash}
-
-where `-r` means recursively crawl to other files and directories, `-np` means avoid crawling to parent directories, and `-D` means to target only the following domain name
-
-For our URL it would be:
-
-~~~
-$ wget -r -np -D software-carpentry.org http://carpentries-incubator.github.io/shell-extras/03-file-transfer/index.html
-~~~
-{: .bash}
-
-To restrict retrieval to a particular extension(s)
-we can use the `-A` option followed by a comma separated list:
-
-~~~
-wget -r -np -D software-carpentry.org -A html http://carpentries-incubator.github.io/shell-extras/03-file-transfer/index.html
-~~~
-{: .bash}
-
-We can also clone a webpage with its local dependencies:
-
-~~~
-$ wget -mkq target_URL
-~~~
-{: .bash}
-
-We could also clone the entire website:
-
-~~~
-$ wget -mkq -np -D domain_name domain_name_URL
-~~~
-{: .bash}
-
-and add the `-nH` option if we do not want a subdirectory created for the websites content:
-
-e.g.
-
-~~~
-$ wget -mkq -np -nH -D example.com http://example.com
-~~~
-{: .bash}
-
-where:
-
-`-m` is for mirroring with time stamping, infinite recursion depth, and preservation of FTP directory settings
-`-k` converts links to make them suitable for local viewing 
-`-q` supresses the output to the screen
-
-The above command can also save a clone of the contents of one domain to another,
-if we are using `ssh` or `sshfs` to access a webserver. 
   
 ## Other commands
 
