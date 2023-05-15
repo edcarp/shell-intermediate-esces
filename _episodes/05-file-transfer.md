@@ -9,7 +9,6 @@ objectives:
 - "Use wget to transfer a remote file to your local computer"
 keypoints:
 - "There are multiple ways to copy remote files at the command-line."
-- "These may be used to simply transfer one file, or to mirror a whole Web site."
 - "Compared to using a Web browser to access and save files, these allow greater opportunities for automation."
 ---
 
@@ -22,30 +21,42 @@ What about files that do not exist in a git repository? If we wish to download o
 
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions. (However, it is not part of Git Bash for Windows.)
 
-To download this lesson (located at https://edcarp.github.io/shell-extras/03-file-transfer/index.html) from the web via HTTP we can simply type:
+To download this lesson (located at https://edcarp.github.io/shell-intermediate-esces/05-file-transfer/index.html) from the Web, we can simply type:
 
 ~~~
-$ wget https://edcarp.github.io/shell-extras/03-file-transfer/index.html
+$ wget https://edcarp.github.io/shell-intermediate-esces/05-file-transfer/index.html
 ~~~
 {: .bash}
 
-~~~
-XXX output XXX
---2021-05-29 02:12:18—  
-https://carpentries-incubator.github.io/shell-extras/03-file-transfer/index.html
-Resolving carpentries-incubator.github.io (carpentries-incubator.github.io)... 185.199.111.153, 185.199.110.153, 185.199.109.153, ...
-Connecting to carpentries-incubator.github.io (carpentries-incubator.github.io)|185.199.111.153|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 22467 (22K) [text/html]
-Saving to: ‘index.html’
-index.html        100%[===================>]  21.94K  --.-KB/s    in 0.003s  
+We will see something similar to this:
 
-2021-05-29 02:12:19 (6.35 MB/s) - ‘index.html’ saved [22467/22467]
+~~~
+--2023-05-15 08:08:03--  https://edcarp.github.io/shell-intermediate-esces/05-file-transfer/index.html
+Resolving edcarp.github.io (edcarp.github.io)... 185.199.110.153, 185.199.108.153, 185.199.109.153, ...
+Connecting to edcarp.github.io (edcarp.github.io)|185.199.110.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15409 (15K) [text/html]
+Saving to: ‘index.html’
+
+index.html                    100%[=================================================>]  15.05K  --.-KB/s    in 0.001s
+
+2023-05-15 08:08:03 (20.5 MB/s) - ‘index.html’ saved [15409/15409]
 ~~~
 {: .output}
+
+We can then view or edit `index.html` using the usual tools, for example `cat`, `nano` or `head`. We can also double-click it in our laptop GUI to open it in a Web browser.
   
 ## Other commands
 
 Alternatively, we can use `curl`, which supports a much larger range of protocols including common mail based protocols like pop3 and smtp. Or we might use `lftp`.
 
 Please refer to the man pages by typing `man wget`, `man curl`, and `man lftp` in the shell for more information.
+
+## Applications
+
+`wget`, `curl` and `lftp` allow a degree of automation that is not possible using a Web browser.
+Possible applications include:
+
+- Downloading large files direct to a server (rather than via your laptop)
+- Mirroring a Web site
+- Automatically updating local datafiles to keep up-to-date with a top copy online.
