@@ -102,7 +102,7 @@ $ chmod -w numbers.txt
 
 Now, all users of the system can read the file but nothing else.
 
-To restore write permission for the user who owns the file, the command is:
+To restore write permission for the user who owns the file (only), the command is:
 
 ~~~
 $ chmod u+w numbers.txt
@@ -119,11 +119,6 @@ because the owner's permissions are now set to read and write:
 -rw-r--r-- 1 dbarker 1049089 18 Feb 16 17:40 numbers.txt
 ~~~
 {: .bash}
-
-~~~
--rw-rwxrwx 1 vlad bio  4215  2010-08-30 08:19 final.grd
-~~~
-{: .output}
 
 ## What about Windows?
 
