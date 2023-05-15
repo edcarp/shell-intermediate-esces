@@ -64,7 +64,7 @@ $ echo $PATH
 ~~~
 {: .bash}
 
-In this case, the convention is to use a colon ':' as a separator.
+In the case of `PATH`, the convention is to use a colon ':' as a separator.
 If a program wants the individual elements of such a list,
 it's the program's responsibility to split the variable's string value into pieces.
 
