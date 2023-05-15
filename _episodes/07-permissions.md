@@ -35,9 +35,8 @@ and everyone else.
 
 For each of these three categories,
 the computer keeps track of
-whether people in that category can read the file,
-write to the file,
-or execute (run) the file or search it if it is a directory.
+whether people in that category can *read* the file;
+*write* to the file; or *run* the file as a program. (In the case of directories, the last category has a different meaning - whether people in that category can *search* the directory.)
 
 For example, if a file had the following set of permissions:
 
