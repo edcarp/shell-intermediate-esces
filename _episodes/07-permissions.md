@@ -62,9 +62,9 @@ $ ls -l
 ~~~
 $ ls -l
 total 5
--rw-r--r-- 1 dbarker 1049089 18 Feb 16 17:40 numbers.txt
-drwxr-xr-x 1 dbarker 1049089  0 Mar 21 09:06 populations/
-drwxr-xr-x 1 dbarker 1049089  0 Feb 16 17:40 writing/
+-rw-r--r-- 1 nelle 1049089 18 Feb 16 17:40 numbers.txt
+drwxr-xr-x 1 nelle 1049089  0 Mar 21 09:06 populations/
+drwxr-xr-x 1 nelle 1049089  0 Feb 16 17:40 writing/
 ~~~
 {: .output}
 
@@ -96,7 +96,7 @@ $ chmod -w numbers.txt
 {: .bash}
 
 ~~~
--r--r--r-- 1 dbarker 1049089 18 Feb 16 17:40 numbers.txt
+-r--r--r-- 1 nelle 1049089 18 Feb 16 17:40 numbers.txt
 ~~~
 {: .output}
 
@@ -116,7 +116,7 @@ A quick `ls -l` shows us that it worked,
 because the owner's permissions are now set to read and write:
 
 ~~~
--rw-r--r-- 1 dbarker 1049089 18 Feb 16 17:40 numbers.txt
+-rw-r--r-- 1 nelle 1049089 18 Feb 16 17:40 numbers.txt
 ~~~
 {: .bash}
 

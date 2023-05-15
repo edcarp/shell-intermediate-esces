@@ -66,7 +66,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/c/Users/dbarker/Desktop
+/c/Users/nelle/Desktop
 ~~~
 {: .output}
 
@@ -93,7 +93,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/c/Users/dbarker/Desktop
+/c/Users/nelle/Desktop
 ~~~
 {: .output}
 
