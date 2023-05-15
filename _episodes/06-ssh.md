@@ -1,6 +1,6 @@
 ---
 title: "Working Remotely"
-teaching: 15
+teaching: 10
 exercises: 0
 questions:
 - "How do I use '`ssh`' and '`scp`' ?"
@@ -28,7 +28,7 @@ just as a local shell would,
 then sends back output, via the server, to our client, for our computer to display.
 
 The SSH protocol
-uses several sophisticated, and heavily tested, encryption protocols
+uses encryption
 to ensure that outsiders can't see what's in the messages
 going back and forth between different computers.
 
@@ -39,22 +39,19 @@ The client program we use to login remotely is
 the secure shell
 or `ssh`.
 
-The `ssh` login client has a companion program called `scp`, think  (`s`)ecure `cp`, 
+The `ssh` login client has a companion program called `scp`,
 which allows us to copy files to or from a remote computer using the same kind of encrypted connection.
 
 ## A remote login using `ssh`
 
-Depending on security settings on the remote server, we may have to be on the local network; or remotely
+Depending on security settings on the server and network, we may have to be connected to the local network; or if working remotely,
 we may have to use the institution's VPN.
 
-Then, to make a remote login, we issue the command `ssh username@computer` 
+Then, we issue the command `ssh username@computer`, 
 which tries to make a connection to the SSH daemon running on the remote computer we have specified.
 
-After we log in,
-we can use the remote shell to use the remote computer's files and directories.
-
-Typing `exit` or Control-D
-terminates the remote shell, and the local client program, and returns us to our previous shell.
+Typing `exit`, or Control-D on an empty line,
+terminates the remote shell.
 
 In the example below,
 the remote machine's command prompt is `moon>`
@@ -105,10 +102,8 @@ $ pwd
 To copy a file,
 we specify the source and destination paths,
 either of which may include computer names.
-If we leave out a computer name,
-`scp` assumes we mean the machine we're running on.
-For example,
-this command copies our latest results to Nelle's `backups` directory of server `backupserver.euphoric.edu`,
+
+For example, this command might be used to copy our latest results to Nelle's `backups` directory of server `backupserver.euphoric.edu`,
 printing out its progress as it does so:
 
 ~~~
