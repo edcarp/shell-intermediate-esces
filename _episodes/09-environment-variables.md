@@ -1,6 +1,6 @@
 ---
 title: Shell Variables
-teaching: 15
+teaching: 10
 exercises: 0
 questions:
 - "How are variables set and accessed in the Unix shell?"
