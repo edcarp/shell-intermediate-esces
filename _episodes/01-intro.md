@@ -19,7 +19,7 @@ cryptic its commands and operation can be."
 
 ### The Shell
 
-This course assumes you have either taken our ur [introductory shell course](https://edcarp.github.io/shell-novice-esces) already, or have broadly similar background knowledge. Here is a reminder of what we mean by the shell.
+This course assumes you have either taken our [introductory shell course](https://edcarp.github.io/shell-novice-esces) already, or have broadly similar background knowledge. Here is a reminder of what we mean by the shell.
 
 The shell is a program where users can type commands.
 With the shell, it's possible to invoke complicated programs like climate modeling software
