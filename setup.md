@@ -5,15 +5,14 @@ root: .
 ---
 
 ## Download files
-You need to download some files to follow this lesson.
-
+You need to download some files to follow this lesson. We will use the same data and software as in our [introductory shell course](https://edcarp.github.io/shell-novice-esces), so if you attended that, you may have the necessary files already. Otherwise:
 1. Download [shell-lesson-data.zip][zip-file] and move the file to your Desktop.
 2. Unzip/extract the file.
    **Let your instructor know if you need help with this step**.
    You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
 
 ## Install software
-If you do not already have the shell software installed, you will need to
+If you do not already have the bash shell software installed, you will need to
 [download and install][install_shell] it.
 
 ## Open a new shell

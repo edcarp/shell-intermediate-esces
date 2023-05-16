@@ -1,6 +1,6 @@
 ---
 title: "Finding Things"
-teaching: 25
+teaching: 30
 exercises: 20
 questions:
 - "How can I find files?"
@@ -371,6 +371,7 @@ directory tree shown below.
 │   ├── python.txt
 │   ├── shark.txt
 │   ├── six-species.csv
+|   ├── toad.txt
 │   └── wildcat.txt 
 |
 └── writing/
@@ -611,27 +612,10 @@ $ grep "searching" $(find . -name "*.txt")
 >
 > A handful of tools extend `grep` to handle a few non text formats. But a
 > more generalizable approach is to convert the data to text, or
-> extract the text-like elements from the data. On the one hand, it makes simple
-> things easy to do. On the other hand, complex things are usually impossible. For
-> example, it's easy enough to write a program that will extract X and Y
-> dimensions from image files for `grep` to play with, but how would you
-> write something to find values in a spreadsheet whose cells contained
-> formulas?
->
-> A last option is to recognize that the shell and text processing have
+> extract the text-like elements from the data. Alternatively, we might recognize
+> that the shell and text processing have
 > their limits, and to use another programming language.
-> When the time comes to do this, don't be too hard on the shell: many
-> modern programming languages have borrowed a lot of
-> ideas from it, and imitation is also the sincerest form of praise.
 {: .callout}
-
-The Unix shell is older than most of the people who use it. It has
-survived so long because it is one of the most productive programming
-environments ever created --- maybe even *the* most productive. Its syntax
-may be cryptic, but people who have mastered it can experiment with
-different commands interactively, then use what they have learned to
-automate their work. Graphical user interfaces may be easier to use at
-first, but once learned, the productivity in the shell is unbeatable.
 
 > ## `find` Pipeline Reading Comprehension
 > 

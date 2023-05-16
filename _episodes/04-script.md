@@ -36,10 +36,10 @@ rather than having to remember or retype a long list of commands.
 For this example, we'll agin use the `exercise-data/populations` directory containing population time series for six species, from the Living Planet Database of the [Living Planet Index](https://www.livingplanetindex.org/data_portal).
 
 Let's start by going back to `populations/` and creating a new file, `middle.sh`, which will
-become our shell script:
+become our shell script. Use `cd` if required, to change to this directory, then `pwd` to check you
+are in the right directory. Then:
 
 ~~~
-$ cd populations
 $ nano middle.sh
 ~~~
 {: .language-bash}
@@ -88,9 +88,7 @@ our script's output is exactly what we would get if we ran that pipeline directl
 > programming. By default, Microsoft Word uses `.docx` files to store not
 > only text, but also formatting information about fonts, headings, and so
 > on. This extra information isn't stored as characters and doesn't mean
-> anything to tools like `head`: they expect input files to contain
-> nothing but the letters, digits, and punctuation on a standard computer
-> keyboard. When editing programs, therefore, you must either use a plain
+> anything to tools like `head`. When editing programs, therefore, you must either use a plain
 > text editor, or be careful to save files as plain text.
 {: .callout}
 

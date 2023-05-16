@@ -1,6 +1,6 @@
 ---
 title: "Manual Pages"
-teaching: 10
+teaching: 5
 exercises: 0
 questions:
 - "How to use man pages?"
@@ -27,7 +27,16 @@ $ man cp
 
 The output displayed is referred to as the "man page".
 
-Most man pages contain much more information than can fit in one terminal screen.  
+Note, if you are using Git Bash for Windows, man pages are not available. However, you can find them
+on the Web if you search for a term such as "man cp". You can also some help from many commands
+with the `--help` option, whether using Git Bash and other systems:
+
+~~~
+$ cp --help
+~~~
+{: .bash}
+
+Most man pages contain more information than can fit in one terminal screen.  
 To help facilitate reading, the `man` command tries to use a "pager" to move and search
 through the information screenfull by screenfull.  The most common pager is called `less`.
 Detailed information is available using `man less`.  `less` is typically the default 
@@ -82,7 +91,7 @@ cp [OPTION]... [-T] SOURCE DEST
 {: .output}
 
 `[OPTION]` means the `cp` command can be followed by
-one or more optional [flags]({{ page.root }}/reference/{{ site.index }}#command).
+one or more optional flags.
 We can tell they're optional because of the square brackets,
 and we can tell that one or more are welcome because of the ellipsis (...).
 For example,
@@ -101,25 +110,7 @@ Note that to use the last one, the `-t` option is mandatory
 (because it isn't shown in square brackets).
 
 The `DESCRIPTION` section starts with a few paragraphs explaining the command and its use,
-then expands on the possible options one by one:
-
-~~~
-     The following options are available:
-
--a    Same as -pPR options. Preserves structure and attributes of
-           files but not directory structure.
-
-     -f    If the destination file cannot be opened, remove it and create
-           a new file, without prompting for confirmation regardless of
-           its permissions.  (The -f option overrides any previous -n
-           option.)
-
-           The target file is not unlinked before the copy.  Thus, any
-           existing access rights will be retained.
-
-      ...  ...
-~~~
-{: .output}
+then expands on the possible options one by one.
 
 ## Finding Help on Specific Options
 
@@ -143,9 +134,6 @@ until we find the detailed information we need:
 This means that this option has the short form `-t` and the long form `--target-directory`
 and that it takes an argument.
 Its meaning is to copy all the SOURCE arguments into DIRECTORY.
-Thus,
-we can give the destination explicitly
-instead of relying on having to place the directory at the end.
 
 ## Limitations of Man Pages
 
@@ -166,3 +154,4 @@ it will often produce more helpful results.
 {: .callout}
 
 {% include links.md %}
+
