@@ -147,7 +147,7 @@ if we wrote this loop as:
 ~~~
 $ for x in bowerbird.txt dunnock.txt python.txt shark.txt toad.txt wildcat.txt
 > do
->     cut -f 5 $filename | sort | uniq
+>     cut -f 5 $x | sort | uniq
 > done
 ~~~
 {: .language-bash}
@@ -157,7 +157,7 @@ or:
 ~~~
 $ for temperature in bowerbird.txt dunnock.txt python.txt shark.txt toad.txt wildcat.txt
 > do
->     cut -f 5 $filename | sort | uniq
+>     cut -f 5 $temperature | sort | uniq
 > done
 ~~~
 {: .language-bash}
